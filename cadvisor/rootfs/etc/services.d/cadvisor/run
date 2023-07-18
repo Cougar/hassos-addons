@@ -1,0 +1,12 @@
+#!/usr/bin/env bashio
+# ==============================================================================
+# Home Assistant Community Add-on: cAdvisor
+# Runs the cAdvisor
+# ==============================================================================
+bashio::log.info "Starting cAdvisor..."
+
+VERBOSE=$(bashio::config 'verbose')
+EXTRA_ARGS=$(bashio::config 'cmdline_extra_args' '')
+
+# Run cAdvisor
+exec /usr/local/bin/cadvisor -v "${VERBOSE}" ${EXTRA_ARGS}

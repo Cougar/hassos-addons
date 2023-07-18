@@ -1,0 +1,36 @@
+---
+
+name: cAdvisor
+version: "0.0.8"
+slug: cadvisor
+stage: experimental
+description: Container Advisor
+url: "https://github.com/Cougar/hassos-addons/tree/main/cadvisor"
+arch:
+  - aarch64
+  - amd64
+startup: services
+init: false
+webui: "http://[HOST]:[PORT:8080]"
+watchdog: "http://[HOST]:[PORT:8080]/healthz"
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: Default cadvisor port and web interface
+hassio_api: false
+homeassistant_api: false
+auth_api: false
+docker_api: true
+host_dbus: true
+host_network: true
+host_pid: true
+devices:
+  - /dev/kmsg
+apparmor: false
+advanced: true
+options:
+  verbose: 0
+  cmdline_extra_args: ""
+schema:
+  verbose: "int"
+  cmdline_extra_args: "str?"

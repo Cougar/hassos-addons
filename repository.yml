@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Logan Marchione Home Assistant Add-Ons
-url: 'https://github.com/loganmarchione/hassos-addons'
-maintainer: Logan Marchione
+name: Logan Marchione Home Assistant Add-Ons extended by Cougar
+url: 'https://github.com/Cougar/hassos-addons'
+maintainer: Cougar
